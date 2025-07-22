@@ -1,0 +1,61 @@
+```markdown
+# Prompt for Replit: Service Card Display, Footer Navigation Pages, and Booking Test
+
+---
+
+## 1. Limit Registration List in Service Cards
+
+- In the landing page *Services* section, **display only the first 4 registrations under each service card**.
+- For all services:  
+  - **Show no more than four registration types as a sample underneath the service name**.
+  - Below these, include a prominent **"Learn More" button**. Clicking this navigates to the full service page, which lists every related registration and details.
+- **Do not show the full list of all registration types directly in the card; avoid visual clutter and keep the section clean and scan-friendly**[4][8][9].
+
+---
+
+## 2. Add Essential Site Pages From Footer Navigation
+
+- **Create the following static pages:**  
+    - About Us  
+    - Contact Us  
+    - Blog
+- Link each of these to the relevant nav links in the **footer** (the links are already present).
+- **Remove the Pricing link** from the footer.
+- Page content:
+    - Provide brief, SEO-optimized content sections for About Us, Contact, and Blog home (blog page can have a "coming soon" placeholder if no blogs yet).
+    - Ensure these pages are accessible and styled consistently.
+
+---
+
+## 3. Booking Testing Instructions
+
+- After these UI changes, **request the user’s Brevo SMTP credentials** before fully enabling or testing appointment booking.
+    - Clearly display a notice or prompt to the developer/admin (in readme, code comment, or deployment logs) stating:
+      > “Please provide your Brevo SMTP username and password in the .env file to conduct end-to-end testing of the appointment booking and email notification feature.”
+- Do not attempt booking-related email testing or shipping to production until valid credentials are provided.
+
+---
+
+## 4. Visual and UX Notes
+
+- With only 4 registrations shown per service card, the landing page appearance will be less cluttered and more engaging for users, while "Learn More" retains deep navigation access[4][9].
+- Footer navigation to About, Contact, and Blog improves site SEO and credibility.
+- Removing the Pricing page link ensures footer navigation only contains relevant, client-approved pages.
+
+---
+
+**Proceed by:**
+- Limiting visible registrations in each service card to four plus a "Learn More" button.
+- Creating About, Contact, and Blog pages, and wiring them up in the footer nav, removing the Pricing link.
+- Prompting for Brevo credentials before testing any live booking or notifications.
+```
+
+[1] https://ux.stackexchange.com/questions/133849/card-with-button-or-completely-clickable-card
+[2] https://m2.material.io/components/cards
+[3] https://www.justinmind.com/ui-design/cards
+[4] https://www.uxdesigninstitute.com/blog/card-design-for-ui/
+[5] https://stackoverflow.com/questions/55514968/how-do-i-keep-two-cards-and-hide-one-with-show-more-button
+[6] https://uxdesign.cc/its-all-in-the-cards-ux-ui-card-design-44cf9e31d988
+[7] https://baymard.com/blog/number-of-items-loaded-by-default
+[8] https://www.eleken.co/blog-posts/card-ui-examples-and-best-practices-for-product-owners
+[9] https://www.pencilandpaper.io/articles/ux-pattern-analysis-enterprise-filtering
