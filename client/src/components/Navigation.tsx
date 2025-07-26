@@ -101,13 +101,13 @@ export default function Navigation({ onBookingClick }: NavigationProps) {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-dark-main/95 backdrop-blur-sm border-b border-dark-border">
+    <nav className="sticky top-0 z-50 bg-[#222327]/95 backdrop-blur-sm border-b border-[#45474D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Building className="h-8 w-8 text-dark-text-primary" />
-            <span className="text-xl font-bold text-dark-text-primary">Registerstartup</span>
+            <Building className="h-8 w-8 text-[#F5F6FA]" />
+            <span className="text-xl font-bold text-[#F5F6FA]">Registerstartup</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -116,12 +116,12 @@ export default function Navigation({ onBookingClick }: NavigationProps) {
             <div className="relative group">
               <Link 
                 href="/services/business-registration"
-                className="text-dark-text-body hover:text-dark-text-primary px-3 py-2 text-sm font-medium flex items-center"
+                className="text-[#DCDEE1] hover:text-[#F5F6FA] px-3 py-2 text-sm font-medium flex items-center"
               >
                 Business Registration
                 <ChevronDown className="ml-1 h-3 w-3" />
               </Link>
-              <div className="absolute left-0 mt-2 w-64 bg-dark-surface rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute left-0 mt-2 w-64 bg-[#363940] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="py-2">
                   {businessRegistrationServices.map((service) => (
                     <Link

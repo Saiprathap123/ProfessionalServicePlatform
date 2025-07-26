@@ -13,16 +13,16 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-dark-main text-dark-text-primary">
+    <div className="min-h-screen bg-[#282A2E] text-[#F5F6FA]">
       <Navigation onBookingClick={() => setIsBookingModalOpen(true)} />
 
       {/* Hero Section */}
       <section className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-dark-text-primary mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#F5F6FA] mb-6 leading-tight">
             Register Your Startup with Expert CA Services
           </h1>
-          <p className="text-xl md:text-2xl text-dark-text-body mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-[#DCDEE1] mb-8 max-w-3xl mx-auto">
             Your trusted partner for business registration, GST, trademark, tax filing, and compliance. Start your entrepreneurial journey with confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -50,39 +50,39 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-text-primary mb-4">Why Choose Us</h2>
-            <p className="text-xl text-dark-text-body max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#F5F6FA] mb-4">Why Choose Us</h2>
+            <p className="text-xl text-[#DCDEE1] max-w-3xl mx-auto">
               We provide comprehensive CA services with a focus on startups and growing businesses
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-dark-section rounded-xl p-8 hover:bg-dark-card transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-accent-blue rounded-full flex items-center justify-center mb-6">
-                <CheckCircle className="h-8 w-8 text-dark-text-primary" />
+            <div className="bg-[#313338] rounded-xl p-8 hover:bg-[#363940] transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-[#5b91e1] rounded-full flex items-center justify-center mb-6">
+                <CheckCircle className="h-8 w-8 text-[#F5F6FA]" />
               </div>
-              <h3 className="text-xl font-semibold text-dark-text-primary mb-4">Expert CA Services</h3>
-              <p className="text-dark-text-body">
+              <h3 className="text-xl font-semibold text-[#F5F6FA] mb-4">Expert CA Services</h3>
+              <p className="text-[#DCDEE1]">
                 Qualified chartered accountants with years of experience in startup registrations and compliance
               </p>
             </div>
             
-            <div className="bg-dark-section rounded-xl p-8 hover:bg-dark-card transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-accent-blue rounded-full flex items-center justify-center mb-6">
-                <Zap className="h-8 w-8 text-dark-text-primary" />
+            <div className="bg-[#313338] rounded-xl p-8 hover:bg-[#363940] transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-[#5b91e1] rounded-full flex items-center justify-center mb-6">
+                <Zap className="h-8 w-8 text-[#F5F6FA]" />
               </div>
-              <h3 className="text-xl font-semibold text-dark-text-primary mb-4">Quick Turnaround</h3>
-              <p className="text-dark-text-body">
+              <h3 className="text-xl font-semibold text-[#F5F6FA] mb-4">Quick Turnaround</h3>
+              <p className="text-[#DCDEE1]">
                 Fast processing times with regular updates on your application status and document preparation
               </p>
             </div>
             
-            <div className="bg-dark-section rounded-xl p-8 hover:bg-dark-card transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-accent-blue rounded-full flex items-center justify-center mb-6">
-                <TrendingUp className="h-8 w-8 text-dark-text-primary" />
+            <div className="bg-[#313338] rounded-xl p-8 hover:bg-[#363940] transition-all duration-300 transform hover:scale-105">
+              <div className="w-16 h-16 bg-[#5b91e1] rounded-full flex items-center justify-center mb-6">
+                <TrendingUp className="h-8 w-8 text-[#F5F6FA]" />
               </div>
-              <h3 className="text-xl font-semibold text-dark-text-primary mb-4">Business Growth Support</h3>
-              <p className="text-dark-text-body">
+              <h3 className="text-xl font-semibold text-[#F5F6FA] mb-4">Business Growth Support</h3>
+              <p className="text-[#DCDEE1]">
                 Ongoing support for scaling your business with compliance, taxation, and financial planning
               </p>
             </div>
@@ -91,23 +91,23 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-dark-section">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#313338]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-text-primary mb-4">Our Services</h2>
-            <p className="text-xl text-dark-text-body max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#F5F6FA] mb-4">Our Services</h2>
+            <p className="text-xl text-[#DCDEE1] max-w-3xl mx-auto">
               Comprehensive CA services to help you start, manage, and grow your business
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* 1. Business Registration */}
-            <div className="bg-dark-main rounded-xl p-8 border border-dark-border hover:border-accent-blue transition-all duration-300 transform hover:scale-105">
+            <div className="bg-[#282A2E] rounded-xl p-8 border border-[#45474D] hover:border-[#5b91e1] transition-all duration-300 transform hover:scale-105">
               <div className="mb-6">
-                <Building className="h-12 w-12 text-accent-blue mb-4" />
-                <h2 className="text-xl font-semibold text-dark-text-primary mb-2">Business Registration</h2>
-                <p className="text-dark-text-body mb-4">Complete business setup services for all types of company structures with expert CA guidance</p>
-                <ul className="text-sm text-dark-text-muted mb-4 space-y-1">
+                <Building className="h-12 w-12 text-[#5b91e1] mb-4" />
+                <h2 className="text-xl font-semibold text-[#F5F6FA] mb-2">Business Registration</h2>
+                <p className="text-[#DCDEE1] mb-4">Complete business setup services for all types of company structures with expert CA guidance</p>
+                <ul className="text-sm text-[#AEB0B8] mb-4 space-y-1">
                   <li>• Private Limited Company Registration</li>
                   <li>• Public Limited Company Registration</li>
                   <li>• LLP Registration</li>
@@ -115,7 +115,7 @@ export default function Home() {
                 </ul>
                 <Link
                   href="/services/business-registration"
-                  className="text-dark-text-primary hover:text-accent-blue font-medium"
+                  className="text-[#F5F6FA] hover:text-[#5b91e1] font-medium"
                 >
                   Learn More →
                 </Link>

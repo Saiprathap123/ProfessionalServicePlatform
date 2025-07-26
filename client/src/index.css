@@ -24,26 +24,25 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
   
-  /* New Dark Grey Theme Palette */
-  --dark-bg-main: #232427;
-  --dark-bg-section: #27292c;
-  --dark-surface: #292a2d;
-  --dark-card: #303135;
-  --dark-border: #35363b;
-  --dark-divider: #414247;
-  --dark-text-primary: #f5f5f7;
-  --dark-text-body: #e3e5e8;
-  --dark-text-muted: #bdbec2;
-  --dark-button-bg: #35373c;
-  --dark-button-text: #f5f5f7;
-  --dark-button-border: #46484f;
-  --dark-button-hover-bg: #f8fafd;
-  --dark-button-hover-text: #242628;
-  --dark-input-bg: #292b2f;
-  --dark-input-text: #f5f5f7;
-  --dark-input-placeholder: #818289;
-  --dark-input-border: #35363b;
-  --accent-blue: #70a1ff;
+  /* Distinct Grey Theme Palette */
+  --dark-bg-main: #282A2E;
+  --dark-bg-section: #313338;
+  --dark-surface: #363940;
+  --dark-nav: #222327;
+  --dark-border: #45474D;
+  --dark-panel: #393B41;
+  --dark-text-primary: #F5F6FA;
+  --dark-text-body: #DCDEE1;
+  --dark-text-muted: #AEB0B8;
+  --dark-button-bg: #45474D;
+  --dark-button-text: #F5F6FA;
+  --dark-button-hover-bg: #F5F6FA;
+  --dark-button-hover-text: #282A2E;
+  --dark-input-bg: #393B41;
+  --dark-input-text: #F5F6FA;
+  --dark-input-placeholder: #AEB0B8;
+  --dark-input-border: #45474D;
+  --accent-blue: #5b91e1;
 }
 
 .dark {

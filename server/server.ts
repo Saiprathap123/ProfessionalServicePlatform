@@ -7,16 +7,14 @@ import { insertBookingSchema } from "@shared/schema";
 import { getServiceRecommendations, analyzeBusinessNeeds } from "./ai-service";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // SMTP Configuration for Brevo
-  // Note: Using recruitment@dynish.com as sender email - domain authentication may be pending
-  // Once Brevo domain verification is complete, emails will deliver normally
+  // SMTP Configuration for Brevo with updated credentials
   const transporter = nodemailer.createTransport({
     host: "smtp-relay.brevo.com",
     port: 587,
     secure: false,
     auth: {
-      user: process.env.BREVO_USER,
-      pass: process.env.BREVO_PASS,
+      user: "9284b3002@smtp-brevo.com",
+      pass: "C9QhvHxbLpTn865P",
     },
     tls: {
       ciphers: 'SSLv3'
@@ -68,7 +66,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const mailOptionsAdmin = {
         from: "recruitment@dynish.com",
-        to: "recruitment@dynish.com",
+        to: "pottipatisaiprathap1234@gmail.com",
         subject: "New Appointment Booking (Client)",
         html: `
           <h2>New appointment booked</h2>

@@ -1,0 +1,98 @@
+```markdown
+# Replit Implementation Prompt: Distinct Grey Theme Overhaul & Email Notification Testing
+
+---
+
+## 1. Theme Overhaul: Switch Entire Site to a Distinct, Layered Grey Palette
+
+You must update the **entire color scheme** – background, cards, text, buttons, all UI elements – to a visually differentiated, layered dark grey theme. **It should be obviously different from black and create a contemporary, high-contrast professional feel.**
+
+### a) Adopt This Color Palette (use hex codes directly or in Tailwind config):
+
+- **Main background:** `#282A2E` (deep slate grey)
+- **Section alternate bg:** `#313338` (lighter grey for alternating sections or hero)
+- **Card and Surface bg:** `#363940`
+- **Navigation bar / Footer:** `#222327`
+- **Borders & Dividers:** `#45474D`
+- **Panel highlights:** `#393B41`
+- **Primary Headings (`h1`, `h2`):** `#F5F6FA` (nearly white)
+- **Body Text:** `#DCDEE1`
+- **Secondary Text:** `#AEB0B8`
+- **Button Background:** `#45474D`
+- **Button Text:** `#F5F6FA` (white)
+- **Button Hover:**  
+  - BG: `#F5F6FA` (white)
+  - Text: `#282A2E` (slate grey)
+- **Input/Field BG:** `#393B41`
+- **Input Text:** `#F5F6FA`
+- **Accent color (optional, minimal):** `#5b91e1` (soft blue) for links/hover/CTA icons only
+
+### b) Implementation Instructions
+
+- Update `tailwind.config.js`, global CSS, and all page/component bg and card color references with these shades.
+- Replace every instance of `bg-black`, `bg-[#0a0a0a]`, `bg-[#232323]`, etc., with `bg-[#282A2E]` for page/main backgrounds.
+- Cards, dropdowns, and panels must use `#363940` or `#313338` for clear differentiation.
+- Button classes should be:
+  ```
+  bg-[#45474D] text-[#F5F6FA] border-[#393B41] 
+  hover:bg-[#F5F6FA] hover:text-[#282A2E] hover:border-[#45474D] 
+  transition-all duration-150 font-semibold rounded-lg
+  ```
+- Adjust text in all headings and secondary labels as per above palette.
+- Visually test the site to ensure every interactive or text-bearing element is legible and visually separated from its background (no muddy mono-grey), and the theme is easy to distinguish from black.
+
+---
+
+## 2. Test and Fix Email Notification System
+
+- Use the following credentials in your `.env` and backend configuration:
+  ```
+  BREVO_USER=9284b3002@smtp-brevo.com
+  BREVO_PASS=C9QhvHxbLpTn865P
+  ```
+- On every successful appointment booking, send transactional emails:
+  - **To User (from:** `recruitment@dynish.com` **):** Include booking details and meet link.
+  - **To Client/Admin:** `pottipatisaiprathap1234@gmail.com`
+    - Email summary with all appointment data and the same meet link.
+- The "from" address in Nodemailer/sendMail must be `recruitment@dynish.com` (the authenticated sender in Brevo).
+- After setting credentials, book a test appointment. Check for delivery at both addresses and log any errors to the console.
+- If emails do not arrive:
+  - Double-check `.env` (no spaces/quotes), sender verification in Brevo, and domain authentication status.
+  - Add a `transporter.verify()` step to log connection/auth success/failure after server starts.
+
+---
+
+## 3. Final Checklist
+
+- The **theme** must be visually distinct grey layers – no blacks, and each section/panel/button should have perceptible contrast but remain cohesive.
+- **Buttons:** Always grey with white text, invert to white with dark text on hover.
+- **All UI elements** (inputs, dropdowns, cards, footers, modal backgrounds) use the new grey shades.
+- The **email workflow** is live, with booking confirmations sent from `recruitment@dynish.com` to both user and client address, and successful delivery verified.
+- Notify if you see any missed black/dark shades or email issues after implementation for immediate revision.
+
+---
+
+**Proceed with the above grey theme palette and email notification system update. Visually review all pages after updates and run at least one full booking test to verify email delivery.**
+```
+
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/70504792/e694c929-1f23-422c-96d6-5cb69844b32d/Register-a-Startup-Changes.pdf
+[2] https://bungalowwebdesign.com/9-best-color-palettes-for-accountant-websites-in-2024-examples/
+[3] https://www.digitalsilk.com/digital-trends/website-color-schemes/
+[4] https://coolors.co/palettes/popular/professional
+[5] https://www.pinterest.com/ideas/dark-website-color-palette/906943684392/
+[6] https://www.ramotion.com/blog/website-color-schemes/
+[7] https://help.brevo.com/hc/en-us/articles/7924908994450-Send-transactional-emails-using-Brevo-SMTP
+[8] https://help.brevo.com/hc/en-us/articles/7959631848850-Create-and-manage-your-SMTP-keys
+[9] https://visme.co/blog/website-color-schemes/
+[10] https://help.brevo.com/hc/en-us/articles/115000188150-Troubleshooting-issues-with-Brevo-SMTP
+[11] https://www.youtube.com/watch?v=AyVD4jBvk0w
+[12] https://looka.com/blog/color-combinations/
+[13] https://developers.brevo.com/docs/using-the-smtp-relay-with-postfix
+[14] https://www.canva.com/learn/choose-right-colors-brand/
+[15] https://developers.brevo.com/docs/node-smtp-relay-example
+[16] https://www.simplifiedsciencepublishing.com/resources/best-color-palettes-for-scientific-figures-and-data-visualizations
+[17] https://developers.brevo.com/docs/smtp-integration
+[18] https://help.brevo.com/hc/en-us/articles/7924148470546-How-can-I-send-transactional-emails-with-Brevo
+[19] https://developers.brevo.com/docs/authentication-schemes
+[20] https://www.gravityforms.com/blog/how-to-send-wordpress-emails-using-brevo-and-gravity-smtp/
+[21] https://fluentsmtp.com/docs/setting-up-sendinblue-mailer-in-fluent-smtp/

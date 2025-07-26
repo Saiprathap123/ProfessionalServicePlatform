@@ -78,10 +78,10 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     <div className="fixed inset-0 z-50">
       <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm" onClick={handleClose} />
       <div className="fixed inset-0 flex items-center justify-center p-4">
-        <div className="bg-dark-surface rounded-xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+        <div className="bg-[#363940] rounded-xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
           <div className="p-6">
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-bold text-dark-text-primary">
+              <h3 className="text-2xl font-bold text-[#F5F6FA]">
                 {bookingSuccess ? "Booking Confirmed!" : "Book Consultation"}
               </h3>
               <Button
@@ -291,9 +291,10 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       <FormControl>
                         <Textarea
                           {...field}
+                          value={field.value ?? ''}
                           rows={3}
                           placeholder="Any specific requirements or questions..."
-                          className="bg-dark-tertiary border-dark-border text-white placeholder-gray-400 focus:border-accent-grey"
+                          className="bg-[#393B41] border-[#45474D] text-[#F5F6FA] placeholder-[#AEB0B8] focus:border-[#5b91e1]"
                         />
                       </FormControl>
                       <FormMessage />
@@ -313,7 +314,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   <Button
                     type="submit"
                     disabled={bookingMutation.isPending}
-                    className="flex-1 bg-accent-grey text-white hover:bg-opacity-80"
+                    className="flex-1 bg-[#45474D] text-[#F5F6FA] hover:bg-[#F5F6FA] hover:text-[#282A2E] transition-all duration-150 font-semibold"
                   >
                     {bookingMutation.isPending ? "Booking..." : "Book Consultation"}
                   </Button>
