@@ -11,6 +11,30 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        // Dark Grey Theme Colors
+        'dark-main': '#232427',
+        'dark-section': '#27292c', 
+        'dark-surface': '#292a2d',
+        'dark-card': '#303135',
+        'dark-border': '#35363b',
+        'dark-divider': '#414247',
+        'dark-text-primary': '#f5f5f7',
+        'dark-text-body': '#e3e5e8',
+        'dark-text-muted': '#bdbec2',
+        'dark-button': {
+          bg: '#35373c',
+          text: '#f5f5f7',
+          border: '#46484f',
+          'hover-bg': '#f8fafd',
+          'hover-text': '#242628',
+        },
+        'dark-input': {
+          bg: '#292b2f',
+          text: '#f5f5f7',
+          placeholder: '#818289',
+          border: '#35363b',
+        },
+        'accent-blue': '#70a1ff',
         background: "var(--background)",
         foreground: "var(--foreground)",
         card: {

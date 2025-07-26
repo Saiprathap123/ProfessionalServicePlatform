@@ -22,21 +22,21 @@ export default function Navigation({ onBookingClick }: NavigationProps) {
   ];
 
   const gstTaxServices = [
-    { name: "GST Registration", slug: "gst-registration" },
-    { name: "GST Filing", slug: "gst-filing" },
-    { name: "GST Portal Login Assistance", slug: "gst-portal-login-assistance" },
-    { name: "HSN Code Finder", slug: "hsn-code-finder" },
-    { name: "GST Cancellation and Revocation", slug: "gst-cancellation-revocation" },
-    { name: "Indirect Tax Consulting", slug: "indirect-tax-consulting" },
+    { name: "GST Registration", slug: "gst-registration", isPage: false },
+    { name: "GST Filing", slug: "gst-filing", isPage: false },
+    { name: "GST Portal Login Assistance", slug: "gst-portal-login-assistance", isPage: false },
+    { name: "HSN Code Finder", slug: "hsn-code-finder", isPage: false },
+    { name: "GST Cancellation and Revocation", slug: "gst-cancellation-revocation", isPage: false },
+    { name: "Indirect Tax Consulting", slug: "indirect-tax-consulting", isPage: false },
   ];
 
   const licensesRegistrationsServices = [
     { name: "Udyam Registration", slug: "udyam-registration", isPage: true },
-    { name: "MSME Registration", slug: "msme-registration" },
+    { name: "MSME Registration", slug: "msme-registration", isPage: false },
     { name: "Trade Licenses", slug: "trade-license", isPage: true },
     { name: "FSSAI (Food License)", slug: "fssai-license", isPage: true },
-    { name: "IEC (Import/Export Code)", slug: "import-export-code" },
-    { name: "Labour Licenses", slug: "labour-licenses" },
+    { name: "IEC (Import/Export Code)", slug: "import-export-code", isPage: false },
+    { name: "Labour Licenses", slug: "labour-licenses", isPage: false },
   ];
 
   const moreServices = [
@@ -51,63 +51,63 @@ export default function Navigation({ onBookingClick }: NavigationProps) {
     {
       category: "Changes in Private Limited Company",
       items: [
-        { name: "Add a Director", slug: "add-director" },
-        { name: "Remove a Director", slug: "remove-director" },
-        { name: "Increase Authorized Capital", slug: "increase-authorized-capital" },
-        { name: "Close the Pvt Ltd Company", slug: "close-private-company" },
-        { name: "Strike Off Company", slug: "strike-off-company" },
-        { name: "Change Objective or Activity", slug: "change-company-objective" },
-        { name: "Change Address", slug: "change-company-address" },
+        { name: "Add a Director", slug: "add-director", isPage: false },
+        { name: "Remove a Director", slug: "remove-director", isPage: false },
+        { name: "Increase Authorized Capital", slug: "increase-authorized-capital", isPage: false },
+        { name: "Close the Pvt Ltd Company", slug: "close-private-company", isPage: false },
+        { name: "Strike Off Company", slug: "strike-off-company", isPage: false },
+        { name: "Change Objective or Activity", slug: "change-company-objective", isPage: false },
+        { name: "Change Address", slug: "change-company-address", isPage: false },
       ]
     },
     {
       category: "Changes in Limited Liability Partnership",
       items: [
-        { name: "Add Designated Partner", slug: "add-designated-partner" },
-        { name: "Amend LLP Agreement", slug: "amend-llp-agreement" },
-        { name: "Close LLP", slug: "close-llp" },
+        { name: "Add Designated Partner", slug: "add-designated-partner", isPage: false },
+        { name: "Amend LLP Agreement", slug: "amend-llp-agreement", isPage: false },
+        { name: "Close LLP", slug: "close-llp", isPage: false },
       ]
     },
     {
       category: "Employee Benefits",
       items: [
-        { name: "PF Registration", slug: "pf-registration" },
-        { name: "ESI Registration", slug: "esi-registration" },
-        { name: "TDS Returns (Form 24QB)", slug: "tds-returns-24qb" },
-        { name: "Payroll Register", slug: "payroll-register" },
-        { name: "Professional Tax Registration", slug: "professional-tax-registration" },
+        { name: "PF Registration", slug: "pf-registration", isPage: false },
+        { name: "ESI Registration", slug: "esi-registration", isPage: false },
+        { name: "TDS Returns (Form 24QB)", slug: "tds-returns-24qb", isPage: false },
+        { name: "Payroll Register", slug: "payroll-register", isPage: false },
+        { name: "Professional Tax Registration", slug: "professional-tax-registration", isPage: false },
       ]
     },
     {
       category: "Mandatory Annual Filings",
       items: [
-        { name: "Annual Compliance Services", slug: "annual-compliance-services" },
-        { name: "LLP Annual Filings", slug: "llp-annual-filings" },
+        { name: "Annual Compliance Services", slug: "annual-compliance-services", isPage: false },
+        { name: "LLP Annual Filings", slug: "llp-annual-filings", isPage: false },
       ]
     },
     {
       category: "Accounting & Tax",
       items: [
-        { name: "Accounting and Bookkeeping", slug: "accounting-bookkeeping" },
-        { name: "TDS Return Filing", slug: "tds-return-filing" },
-        { name: "Individual Income Tax Filing", slug: "individual-income-tax-filing" },
-        { name: "Proprietorship Tax Return Filing", slug: "proprietorship-tax-return-filing" },
-        { name: "ITR for LLP", slug: "itr-llp" },
-        { name: "Corporate Tax Filing", slug: "corporate-tax-filing" },
-        { name: "Income Tax Assessment", slug: "income-tax-assessment" },
-        { name: "Income Tax Notice Handling", slug: "income-tax-notice-handling" },
+        { name: "Accounting and Bookkeeping", slug: "accounting-bookkeeping", isPage: false },
+        { name: "TDS Return Filing", slug: "tds-return-filing", isPage: false },
+        { name: "Individual Income Tax Filing", slug: "individual-income-tax-filing", isPage: false },
+        { name: "Proprietorship Tax Return Filing", slug: "proprietorship-tax-return-filing", isPage: false },
+        { name: "ITR for LLP", slug: "itr-llp", isPage: false },
+        { name: "Corporate Tax Filing", slug: "corporate-tax-filing", isPage: false },
+        { name: "Income Tax Assessment", slug: "income-tax-assessment", isPage: false },
+        { name: "Income Tax Notice Handling", slug: "income-tax-notice-handling", isPage: false },
       ]
     }
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-dark-primary/95 backdrop-blur-sm border-b border-dark-border">
+    <nav className="sticky top-0 z-50 bg-dark-main/95 backdrop-blur-sm border-b border-dark-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Building className="h-8 w-8 text-white" />
-            <span className="text-xl font-bold text-white">Registerstartup</span>
+            <Building className="h-8 w-8 text-dark-text-primary" />
+            <span className="text-xl font-bold text-dark-text-primary">Registerstartup</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -116,12 +116,12 @@ export default function Navigation({ onBookingClick }: NavigationProps) {
             <div className="relative group">
               <Link 
                 href="/services/business-registration"
-                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium flex items-center"
+                className="text-dark-text-body hover:text-dark-text-primary px-3 py-2 text-sm font-medium flex items-center"
               >
                 Business Registration
                 <ChevronDown className="ml-1 h-3 w-3" />
               </Link>
-              <div className="absolute left-0 mt-2 w-64 bg-dark-secondary rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute left-0 mt-2 w-64 bg-dark-surface rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="py-2">
                   {businessRegistrationServices.map((service) => (
                     <Link

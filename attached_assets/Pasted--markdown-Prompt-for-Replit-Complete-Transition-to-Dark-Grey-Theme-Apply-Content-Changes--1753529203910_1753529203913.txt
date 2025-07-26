@@ -1,0 +1,127 @@
+```markdown
+# Prompt for Replit: Complete Transition to Dark Grey Theme + Apply Content Changes
+
+---
+
+## 1. Design a Dark Grey Theme Color Palette
+
+Adopt the following palette to replace all black backgrounds/elements with harmonious shades of **dark grey** for a professional, modern look (darker than light grey, but distinctly not black):
+
+### **Core Color Palette**
+
+- **Background (main page, sections):**  
+  `#232427` (very dark grey – main page background)  
+  `#27292c` (slightly lighter for sections, hero, or cards)
+
+- **Surface/Card backgrounds:**  
+  `#292a2d` (cards, modals, dropdowns, navs)
+  `#303135` (alternate panels, menu popouts)
+
+- **Elevated Element Shadows:**  
+  `rgba(0,0,0,0.15)` – light shadow under modals/cards for depth
+
+- **Borders/Dividers:**  
+  `#35363b` (menu/card borders)  
+  `#414247` (subtler dividers)
+
+- **Primary Text:**  
+  `#f5f5f7` (pure white for major headings)  
+  `#e3e5e8` (body text)  
+  `#bdbec2` (secondary/caption text)
+
+- **CTA/Button Normal:**  
+  Background: `#35373c`  
+  Text: `#f5f5f7`  
+  Border: `#46484f`  
+  **On hover:**  
+    - Bg: `#f8fafd` (brilliant light grey/white)  
+    - Text: `#242628` (strong dark grey)  
+    - Border: `#35373c`
+
+- **Input fields, dropdowns:**  
+  Background: `#292b2f`  
+  Text: `#f5f5f7`  
+  Placeholder: `#818289`  
+  Border: `#35363b`
+
+- **Link/Accent Color:**  
+  `#70a1ff` or a subtle blue (`#5b91e1`) for highlights, hover, and clickable states only (optional and minimal, not as background).
+
+### **Tailwind and CSS implementation (example):**
+
+```
+// tailwind.config.js (add or override theme)
+theme: {
+  extend: {
+    colors: {
+      background: '#232427',
+      surface: '#292a2d',
+      card: '#303135',
+      border: '#35363b',
+      divider: '#414247',
+      text: {
+        primary: '#f5f5f7',
+        body: '#e3e5e8',
+        muted: '#bdbec2',
+      },
+      button: {
+        bg: '#35373c',
+        text: '#f5f5f7',
+        border: '#46484f',
+        hoverbg: '#f8fafd',
+        hovertext: '#242628'
+      },
+      input: {
+        bg: '#292b2f',
+        text: '#f5f5f7',
+        placeholder: '#818289',
+        border: '#35363b'
+      }
+      // (Add accents as needed)
+    }
+  }
+}
+```
+
+**In practice:**
+- Replace all `bg-black`, `bg-[#0a0a0a]`, etc. to `bg-[#232427]`
+- Cards, menus, nav dropdowns: `bg-[#292a2d]` or `bg-[#303135]`
+- Text: `text-[#f5f5f7]` for headings, `text-[#e3e5e8]` for standard content, muted for captions
+- Buttons:  
+  `bg-[#35373c] text-[#f5f5f7] border-[#46484f] hover:bg-[#f8fafd] hover:text-[#242628] hover:border-[#35373c]`
+
+---
+
+## 2. How to Apply This Theme
+
+1. **Update Tailwind config and any custom CSS to use these variables or hex values.**
+2. Refactor global container/background classes to new grey values.
+3. Apply new card/background/text colors to all sections: landing, services, registration.
+4. Make sure modal, dropdown, footer, nav, and sidebar backgrounds use the palette variants.
+5. Test all button and input states in new colors.
+
+---
+
+## 3. Content Changes from Document
+
+**Apply ALL the detailed instructions in `Register-a-Startup-Changes.pdf`:**
+- Update Private Company, Public Company, LLP, Partnership, Licenses & Registration, GST, "More" menu arrangements, and all other content/pages exactly as outlined in the doc.
+- Remove "One Person Company" pages/tabs, add Chits Funds Company (placeholder if not given), shift Partnership tab position as described, and merge MSME into Udyam.
+- Make sure all navigation, submenu/tab order, page/tabs, and section names strictly match what is given/edited in the doc.
+
+---
+
+## 4. Review and Deliver
+
+- Ensure *all* site components, backgrounds, panels, cards, menus, modals, and buttons adopt the new dark grey theme.
+- Confirm that all content and navigation is updated per the provided document.
+- Test on all responsive breakpoints (desktop/tablet/mobile) for visual harmony and accessibility.
+
+---
+
+**After updating colors and applying the doc's instructions, the site will now appear professionally themed in dark grey, matching the client preference. All content and structure edits must match the detailed requirements provided.**
+```
+
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/70504792/e694c929-1f23-422c-96d6-5cb69844b32d/Register-a-Startup-Changes.pdf
+[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/70504792/4003de25-b8bf-45cc-a2ad-ada45714f546/WhatsApp-Image-2025-07-26-at-15.11.16_cc756163.jpg?AWSAccessKeyId=ASIA2F3EMEYEVZF2DVD3&Signature=xth4v96fuc9rEqD0LIS5b%2BCa%2Bmc%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEDIaCXVzLWVhc3QtMSJHMEUCIEvKfG4FqionoBKI3%2BR8yYSGUqSnXvBzpbJBCVishkPlAiEA%2BBAr9PhOK5XF8sGUHUh9s%2BBlixZkOKgcA1rM5tj39%2FMq8QQIWxABGgw2OTk3NTMzMDk3MDUiDN8jggs6lGt7wSOEeirOBD65f7qT3HjBHWHNkvk17XWQWuL749CcwPe9OBC3GFvs0SDCyr%2F22l1anlwlPn52L4TbAK9RBbsUC%2FYdQysGw8TVTWw80MYMwrcFOnXgiWnMUnK9iSi7dNpDmF2J%2Fw7dQjk6TmOgAe%2FItZciXkp1%2Fgzn40%2BzBUFNO4rbPMf3H6FKfj4Q14OFroA9KGamuF2QR07kLDFzwJq%2BSAX%2BJ3G3%2BDSX6Bimfn2A21T%2FJ1LC0l6DWYZEJS2kefs6QrCF%2B3p1hDfCmgtQyZQX3vNM6nw5CAEzttSHeyVz6u3dQ9bbNUKeSB%2FZCNaf3eU5wFzg77a5eYt%2F%2BlFMLG3vIJMC1e81rEgB0k5XLzdvaeQTtrL9o1dycF6jP%2Fx1RpYUOCTDeFMB5dW1i0o4RtRGqxJNRQ9ixt5IlAmLvLCIBfOnne3oxbxayChXRehFTPKEgB61tnhfF%2FWFomdK%2F7LGXumYvPAbnuTLzipEod6z5YgwtLbfkmXBr9yLmLvJXDt1Q6hmOXVMFZHbB1DMi2iAQx%2BkyllR5uGzDNzptRdyALbwROoZJUNwDQgSfeSA3QuztVm1yypwPl7sjwSSdIoyginADo6z6omG3kuewdS0MJxlE5Z2hGmClAslhm2LgLrIXN7cvQEgVNnYVx9%2Fg7eNrKhQ%2BwVyts2oI%2BygsxYbsqtQlejVKP8qCOFlkcY61%2F4GwAEJGbo1siaSniarhrPlo1lwRwOg2iRCInepBQH%2FL0uSz3sDTxjbTaxf550aqK5BmLJIZUpKxr64az2OYJdcBg9RWgYxMIvEksQGOpoB1RCBi3pznt7nGMQGQ08ZyhTqYHEFQBQYitFzOt2FN4iywLiJFzMmKMXxgDnLJJQDqhzJJ4coYhw%2F%2BDA4NTq90f0gO%2F4vJXe8ZXCbL5zjr1Csu64ICAtDew7fbqTZ76oyktIhqUrhEtcvWap7F5XduhPEiwKpLeJ1yaHx2%2B%2BN4sCD2DVnzZyOMKh0WrHMYX49oefSeW%2BsZn%2FkOQ%3D%3D&Expires=1753524943
+[3] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/70504792/67946f9f-ce82-4ee5-ad7d-9c5b24975f11/WhatsApp-Image-2025-07-26-at-15.12.23_758e4b2a.jpg?AWSAccessKeyId=ASIA2F3EMEYEVZF2DVD3&Signature=YqwGdnnT9KD0BI%2FcN6qkrGT9W5U%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEDIaCXVzLWVhc3QtMSJHMEUCIEvKfG4FqionoBKI3%2BR8yYSGUqSnXvBzpbJBCVishkPlAiEA%2BBAr9PhOK5XF8sGUHUh9s%2BBlixZkOKgcA1rM5tj39%2FMq8QQIWxABGgw2OTk3NTMzMDk3MDUiDN8jggs6lGt7wSOEeirOBD65f7qT3HjBHWHNkvk17XWQWuL749CcwPe9OBC3GFvs0SDCyr%2F22l1anlwlPn52L4TbAK9RBbsUC%2FYdQysGw8TVTWw80MYMwrcFOnXgiWnMUnK9iSi7dNpDmF2J%2Fw7dQjk6TmOgAe%2FItZciXkp1%2Fgzn40%2BzBUFNO4rbPMf3H6FKfj4Q14OFroA9KGamuF2QR07kLDFzwJq%2BSAX%2BJ3G3%2BDSX6Bimfn2A21T%2FJ1LC0l6DWYZEJS2kefs6QrCF%2B3p1hDfCmgtQyZQX3vNM6nw5CAEzttSHeyVz6u3dQ9bbNUKeSB%2FZCNaf3eU5wFzg77a5eYt%2F%2BlFMLG3vIJMC1e81rEgB0k5XLzdvaeQTtrL9o1dycF6jP%2Fx1RpYUOCTDeFMB5dW1i0o4RtRGqxJNRQ9ixt5IlAmLvLCIBfOnne3oxbxayChXRehFTPKEgB61tnhfF%2FWFomdK%2F7LGXumYvPAbnuTLzipEod6z5YgwtLbfkmXBr9yLmLvJXDt1Q6hmOXVMFZHbB1DMi2iAQx%2BkyllR5uGzDNzptRdyALbwROoZJUNwDQgSfeSA3QuztVm1yypwPl7sjwSSdIoyginADo6z6omG3kuewdS0MJxlE5Z2hGmClAslhm2LgLrIXN7cvQEgVNnYVx9%2Fg7eNrKhQ%2BwVyts2oI%2BygsxYbsqtQlejVKP8qCOFlkcY61%2F4GwAEJGbo1siaSniarhrPlo1lwRwOg2iRCInepBQH%2FL0uSz3sDTxjbTaxf550aqK5BmLJIZUpKxr64az2OYJdcBg9RWgYxMIvEksQGOpoB1RCBi3pznt7nGMQGQ08ZyhTqYHEFQBQYitFzOt2FN4iywLiJFzMmKMXxgDnLJJQDqhzJJ4coYhw%2F%2BDA4NTq90f0gO%2F4vJXe8ZXCbL5zjr1Csu64ICAtDew7fbqTZ76oyktIhqUrhEtcvWap7F5XduhPEiwKpLeJ1yaHx2%2B%2BN4sCD2DVnzZyOMKh0WrHMYX49oefSeW%2BsZn%2FkOQ%3D%3D&Expires=1753524943

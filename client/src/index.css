@@ -24,35 +24,48 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
   
-  /* Dark theme colors */
-  --dark-primary: hsl(0, 0%, 3.9%);
-  --dark-secondary: hsl(0, 0%, 10.2%);
-  --dark-tertiary: hsl(0, 0%, 16.5%);
-  --dark-border: hsl(0, 0%, 20%);
-  --dark-hover: hsl(0, 0%, 25.1%);
-  --accent-grey: hsl(213, 16%, 39.6%);
+  /* New Dark Grey Theme Palette */
+  --dark-bg-main: #232427;
+  --dark-bg-section: #27292c;
+  --dark-surface: #292a2d;
+  --dark-card: #303135;
+  --dark-border: #35363b;
+  --dark-divider: #414247;
+  --dark-text-primary: #f5f5f7;
+  --dark-text-body: #e3e5e8;
+  --dark-text-muted: #bdbec2;
+  --dark-button-bg: #35373c;
+  --dark-button-text: #f5f5f7;
+  --dark-button-border: #46484f;
+  --dark-button-hover-bg: #f8fafd;
+  --dark-button-hover-text: #242628;
+  --dark-input-bg: #292b2f;
+  --dark-input-text: #f5f5f7;
+  --dark-input-placeholder: #818289;
+  --dark-input-border: #35363b;
+  --accent-blue: #70a1ff;
 }
 
 .dark {
-  --background: hsl(0, 0%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(0, 0%, 10.2%);
-  --muted-foreground: hsl(0, 0%, 64.9%);
-  --popover: hsl(0, 0%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(0, 0%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(0, 0%, 16.5%);
-  --input: hsl(0, 0%, 16.5%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(0, 0%, 16.5%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(0, 0%, 16.5%);
-  --accent-foreground: hsl(0, 0%, 98%);
+  --background: var(--dark-bg-main);
+  --foreground: var(--dark-text-primary);
+  --muted: var(--dark-surface);
+  --muted-foreground: var(--dark-text-muted);
+  --popover: var(--dark-surface);
+  --popover-foreground: var(--dark-text-primary);
+  --card: var(--dark-card);
+  --card-foreground: var(--dark-text-primary);
+  --border: var(--dark-border);
+  --input: var(--dark-input-bg);
+  --primary: var(--accent-blue);
+  --primary-foreground: var(--dark-text-primary);
+  --secondary: var(--dark-button-bg);
+  --secondary-foreground: var(--dark-text-primary);
+  --accent: var(--dark-bg-section);
+  --accent-foreground: var(--dark-text-primary);
   --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(0, 0%, 83.9%);
+  --destructive-foreground: var(--dark-text-primary);
+  --ring: var(--dark-border);
 }
 
 @layer base {
@@ -62,48 +75,75 @@
 
   body {
     @apply font-sans antialiased;
-    background-color: var(--dark-primary);
-    color: white;
+    background-color: var(--dark-bg-main);
+    color: var(--dark-text-primary);
   }
 }
 
-/* Custom classes for dark theme */
-.bg-dark-primary {
-  background-color: var(--dark-primary);
+/* Custom classes for new dark grey theme */
+.bg-dark-main {
+  background-color: var(--dark-bg-main);
 }
 
-.bg-dark-secondary {
-  background-color: var(--dark-secondary);
+.bg-dark-section {
+  background-color: var(--dark-bg-section);
 }
 
-.bg-dark-tertiary {
-  background-color: var(--dark-tertiary);
+.bg-dark-surface {
+  background-color: var(--dark-surface);
+}
+
+.bg-dark-card {
+  background-color: var(--dark-card);
 }
 
 .border-dark-border {
   border-color: var(--dark-border);
 }
 
-.hover\:bg-dark-hover:hover {
-  background-color: var(--dark-hover);
+.border-dark-divider {
+  border-color: var(--dark-divider);
 }
 
-.bg-accent-grey {
-  background-color: var(--accent-grey);
+.text-dark-primary {
+  color: var(--dark-text-primary);
 }
 
-.text-accent-grey {
-  color: var(--accent-grey);
+.text-dark-body {
+  color: var(--dark-text-body);
 }
 
-.border-accent-grey {
-  border-color: var(--accent-grey);
+.text-dark-muted {
+  color: var(--dark-text-muted);
 }
 
-.hover\:border-accent-grey:hover {
-  border-color: var(--accent-grey);
+/* Dark Grey Button Styles */
+.btn-dark-grey {
+  background-color: var(--dark-button-bg);
+  color: var(--dark-button-text);
+  border: 1px solid var(--dark-button-border);
+  transition: all 0.2s ease;
 }
 
-.hover\:text-accent-grey:hover {
-  color: var(--accent-grey);
+.btn-dark-grey:hover {
+  background-color: var(--dark-button-hover-bg);
+  color: var(--dark-button-hover-text);
+  border-color: var(--dark-button-border);
+}
+
+/* Dark Grey Input Styles */
+.input-dark-grey {
+  background-color: var(--dark-input-bg);
+  color: var(--dark-input-text);
+  border: 1px solid var(--dark-input-border);
+}
+
+.input-dark-grey::placeholder {
+  color: var(--dark-input-placeholder);
+}
+
+.input-dark-grey:focus {
+  border-color: var(--accent-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(112, 161, 255, 0.1);
 }
