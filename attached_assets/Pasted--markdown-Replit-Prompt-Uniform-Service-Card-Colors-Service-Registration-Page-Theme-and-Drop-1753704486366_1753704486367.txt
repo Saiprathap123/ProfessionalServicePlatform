@@ -1,0 +1,64 @@
+```markdown
+# Replit Prompt: Uniform Service Card Colors, Service/Registration Page Theme, and Dropdown Consistency
+
+---
+
+## 1. Services Section Card Colors (Landing Page)
+
+- **Update all service cards in the landing page services section:**  
+  - Ensure every service card (not just Business Registration) uses the **exact same color, shadow, border, and theme styling** as the Business Registration card.
+  - DO NOT use varied/alternate backgrounds for other service cards; all service cards must share a single, consistent background color, border, and card style as Business Registration.
+  - Remove any unique or legacy background or color assignments for the other service cards.
+  - Example: If Business Registration card uses `bg-[#555555]` (or given design color), then all other cards must use `bg-[#555555]` as well, with the same border/shadow/elevation and text color.
+
+---
+
+## 2. Service and Registration Page Theme Fix
+
+- **Apply the updated grey theme to all service and registration pages:**
+    - The main background of every service and registration detail page **must not be pure white**.
+    - Use the selected site grey palette for backgrounds:  
+      - Main background: `#777777`  
+      - Section/card backgrounds: `#555555`
+    - Text color for all major headings: `#232323`  
+    - Body/paragraph text: `#191919` or darkest shade for best legibility on light grey backgrounds  
+    - Never allow white background with light text—if any page is still white after deployment, apply the global background and container theme classes.
+- **Specifically:**
+    - Set background for service and registration pages at the page/container level—no section should remain white or with old default classes.
+    - All UI elements, content cards, and side panels must consistently use the new grey theme for visual unity.
+
+---
+
+## 3. Dropdown Consistency (Header Navigation)
+
+- **Fix all header dropdowns (other than Business Registration) so they look and behave identically:**
+    - All dropdowns should have a solid, non-transparent background matching the theme color palette (e.g., `bg-[#555555]` or whatever is applied to the Business Registration dropdown).
+    - No glassmorphism, partial transparency, or different backdrop on any dropdown.
+    - Apply the same box-shadow, border radius, text color, and spacing as the Business Registration dropdown to every navigation dropdown in the header ("Licenses & Registration," "GST & Indirect Taxes," etc.).
+    - On hover or focus for list items within dropdown, use the highlight/active color as per the theme and present clear feedback.
+
+---
+
+## 4. Apply to All Services
+
+- **All these changes must be applied to every service and registration in the project**, not only Business Registration.
+- Review all instances where color, background, or dropdown menu was previously unique to Business Registration, and **standardize across every service**.
+
+---
+
+## 5. Visual QA and Testing
+
+- Review the landing page, service/registration detail pages, and header navigation (on desktop and mobile).
+    - Ensure visual consistency and high contrast/readability for every UI element.
+    - Dropdowns should behave and appear unified across all services.
+    - No sections should remain with a mismatched color, transparency glitch, or text-invisible-on-background error.
+
+---
+
+**Proceed immediately to implement uniform styling for all service cards, page backgrounds, registration page containers, and all header dropdowns as described. This will ensure brand consistency, clarity, and client satisfaction across the entire CA platform.**
+```
+
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/70504792/e694c929-1f23-422c-96d6-5cb69844b32d/Register-a-Startup-Changes.pdf
+[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/70504792/cc574745-933d-4004-8980-1353a7f0dd69/image.jpg?AWSAccessKeyId=ASIA2F3EMEYE3BOQ5E7F&Signature=prRnby721W08Bqt8CCI1HQZnQpY%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEGQaCXVzLWVhc3QtMSJHMEUCIAE5lFAHRHaFtT7U9XGAOMQRUqiPXvzUY9HGyTuMhaM5AiEArm0sDzXiOyI6uvdW5l2JTZldklVRgY15O14Bw3mDKasq%2BgQIjf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDNleVpyqmHFyEWe5cirOBA%2BEOmUqc578dWTcGw8n36oMJth4u1uYQfCPQ1FSmcJiKR3vb2z3TTn81htjxJU2dcCcwYU6pHJprGLa4%2BeAhpr4kZhKEOpydJgzm8376oerp6leHsA41tDTLQ1Ndx820h006ovor4msQkoPkD1ue42row2OVLOH6vqakBT81%2BKinTMorekmaoUsh5t4dGEYi2vspqVB8SUNt7ycw0cOgFJ0h%2B0V6okGuBTqQDI85vOpTZ%2FnkpdgnOkXcDzgn7hqKkUqQL6rrfhidt9FNXA0FdpVQ2S%2FMBshgrh1dyNFUFqttvtS%2Fy10bDzKRa7vrVGdspof9K%2BrhRRVTpcuxUWu5mvNAilqQt9zrP9y7RMMHaGZqu8BvVJBetqZAxZNsbqYk3sYZkK%2BUUjJhiZLCc%2FVgGMDQ4BYNnTiw98gSUfxF59yNCzrtid%2B2NyJ6y9nKn1uEE0x0SjFtvm2UkJvTdFoYuoVC0cBy6EznnycL%2FyKo9AZoZSQXyyX7fV%2Fl8athBtax5VkcP2kUmkIu1U%2FmOxTuBumw0nNiBVfNeEG8eRNAo24Vy6kLBfsPfWYoX4nRI1nMdTXI2ZdxgzEf%2B0orh5JKm84mTupAjNR%2BoEXfjtuW6wv0Ltj1w2EJRslh%2BVJQP8tjYgONwaB4MCKw5Xr21iNdlquN2aWYGrqPnFq7Wa2o4ptmKCuaTd5qM65GKnzB0I9ei8%2FqilFOFYKB1TLCjMFdHUxm0jx8psuK37084CCe%2F0%2Bmf1rneTGhUFZUNsJTXwE9p0tlkxlNtE71GqT%2FkfmMP%2FBncQGOpoB2HixZaXHBCT63ce%2BOir0ui1q6jj4fyVyNNmWBBejNLDpNVzMV%2B7QjUnKTA35Vrnam8XgD%2Fve%2Bvrz4c8mbVYUQ5freWuEyky0ub%2F008Hq01CsKbyz%2BszUQ8w47vhfIStEzWI9KIfd6c6tbvROq%2F9rJbDCSercqURV%2BtFu7vWckL4y3ZJs1EAUW8OTLmLiGYRAtY7yIW%2FyrsG6DA%3D%3D&Expires=1753705017
+[3] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/70504792/b07dd318-2979-4706-92be-10c5d75cdfe2/image.jpg?AWSAccessKeyId=ASIA2F3EMEYE3BOQ5E7F&Signature=4XDLBolzRkcXQEVk%2Bj1qdW0zIXA%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEGQaCXVzLWVhc3QtMSJHMEUCIAE5lFAHRHaFtT7U9XGAOMQRUqiPXvzUY9HGyTuMhaM5AiEArm0sDzXiOyI6uvdW5l2JTZldklVRgY15O14Bw3mDKasq%2BgQIjf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDNleVpyqmHFyEWe5cirOBA%2BEOmUqc578dWTcGw8n36oMJth4u1uYQfCPQ1FSmcJiKR3vb2z3TTn81htjxJU2dcCcwYU6pHJprGLa4%2BeAhpr4kZhKEOpydJgzm8376oerp6leHsA41tDTLQ1Ndx820h006ovor4msQkoPkD1ue42row2OVLOH6vqakBT81%2BKinTMorekmaoUsh5t4dGEYi2vspqVB8SUNt7ycw0cOgFJ0h%2B0V6okGuBTqQDI85vOpTZ%2FnkpdgnOkXcDzgn7hqKkUqQL6rrfhidt9FNXA0FdpVQ2S%2FMBshgrh1dyNFUFqttvtS%2Fy10bDzKRa7vrVGdspof9K%2BrhRRVTpcuxUWu5mvNAilqQt9zrP9y7RMMHaGZqu8BvVJBetqZAxZNsbqYk3sYZkK%2BUUjJhiZLCc%2FVgGMDQ4BYNnTiw98gSUfxF59yNCzrtid%2B2NyJ6y9nKn1uEE0x0SjFtvm2UkJvTdFoYuoVC0cBy6EznnycL%2FyKo9AZoZSQXyyX7fV%2Fl8athBtax5VkcP2kUmkIu1U%2FmOxTuBumw0nNiBVfNeEG8eRNAo24Vy6kLBfsPfWYoX4nRI1nMdTXI2ZdxgzEf%2B0orh5JKm84mTupAjNR%2BoEXfjtuW6wv0Ltj1w2EJRslh%2BVJQP8tjYgONwaB4MCKw5Xr21iNdlquN2aWYGrqPnFq7Wa2o4ptmKCuaTd5qM65GKnzB0I9ei8%2FqilFOFYKB1TLCjMFdHUxm0jx8psuK37084CCe%2F0%2Bmf1rneTGhUFZUNsJTXwE9p0tlkxlNtE71GqT%2FkfmMP%2FBncQGOpoB2HixZaXHBCT63ce%2BOir0ui1q6jj4fyVyNNmWBBejNLDpNVzMV%2B7QjUnKTA35Vrnam8XgD%2Fve%2Bvrz4c8mbVYUQ5freWuEyky0ub%2F008Hq01CsKbyz%2BszUQ8w47vhfIStEzWI9KIfd6c6tbvROq%2F9rJbDCSercqURV%2BtFu7vWckL4y3ZJs1EAUW8OTLmLiGYRAtY7yIW%2FyrsG6DA%3D%3D&Expires=1753705017
+[4] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/70504792/98a1f91e-80fd-4d0e-ad4f-91d0aa591ec6/image.jpg?AWSAccessKeyId=ASIA2F3EMEYE3BOQ5E7F&Signature=oMXeuGk33fedo9oygdOUkVTyeaE%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEGQaCXVzLWVhc3QtMSJHMEUCIAE5lFAHRHaFtT7U9XGAOMQRUqiPXvzUY9HGyTuMhaM5AiEArm0sDzXiOyI6uvdW5l2JTZldklVRgY15O14Bw3mDKasq%2BgQIjf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDNleVpyqmHFyEWe5cirOBA%2BEOmUqc578dWTcGw8n36oMJth4u1uYQfCPQ1FSmcJiKR3vb2z3TTn81htjxJU2dcCcwYU6pHJprGLa4%2BeAhpr4kZhKEOpydJgzm8376oerp6leHsA41tDTLQ1Ndx820h006ovor4msQkoPkD1ue42row2OVLOH6vqakBT81%2BKinTMorekmaoUsh5t4dGEYi2vspqVB8SUNt7ycw0cOgFJ0h%2B0V6okGuBTqQDI85vOpTZ%2FnkpdgnOkXcDzgn7hqKkUqQL6rrfhidt9FNXA0FdpVQ2S%2FMBshgrh1dyNFUFqttvtS%2Fy10bDzKRa7vrVGdspof9K%2BrhRRVTpcuxUWu5mvNAilqQt9zrP9y7RMMHaGZqu8BvVJBetqZAxZNsbqYk3sYZkK%2BUUjJhiZLCc%2FVgGMDQ4BYNnTiw98gSUfxF59yNCzrtid%2B2NyJ6y9nKn1uEE0x0SjFtvm2UkJvTdFoYuoVC0cBy6EznnycL%2FyKo9AZoZSQXyyX7fV%2Fl8athBtax5VkcP2kUmkIu1U%2FmOxTuBumw0nNiBVfNeEG8eRNAo24Vy6kLBfsPfWYoX4nRI1nMdTXI2ZdxgzEf%2B0orh5JKm84mTupAjNR%2BoEXfjtuW6wv0Ltj1w2EJRslh%2BVJQP8tjYgONwaB4MCKw5Xr21iNdlquN2aWYGrqPnFq7Wa2o4ptmKCuaTd5qM65GKnzB0I9ei8%2FqilFOFYKB1TLCjMFdHUxm0jx8psuK37084CCe%2F0%2Bmf1rneTGhUFZUNsJTXwE9p0tlkxlNtE71GqT%2FkfmMP%2FBncQGOpoB2HixZaXHBCT63ce%2BOir0ui1q6jj4fyVyNNmWBBejNLDpNVzMV%2B7QjUnKTA35Vrnam8XgD%2Fve%2Bvrz4c8mbVYUQ5freWuEyky0ub%2F008Hq01CsKbyz%2BszUQ8w47vhfIStEzWI9KIfd6c6tbvROq%2F9rJbDCSercqURV%2BtFu7vWckL4y3ZJs1EAUW8OTLmLiGYRAtY7yIW%2FyrsG6DA%3D%3D&Expires=1753705017

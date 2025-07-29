@@ -1,0 +1,126 @@
+```markdown
+# Replit Prompt: Implement Client-Provided Light Grey Theme (#777777, #555555) and Complete UI Color Audit
+
+---
+
+## 1. Strict Theme Update: Use Client's Provided Grey Shades
+
+- The **entire application theme** must shift to use **only** the client-specified grey color codes:
+    - **Primary background color:** `#777777`  (lighter grey)
+    - **Secondary/background, surface, or card color:** `#555555`  (medium grey)
+    - **Borders, inputs, outlines:** match or slightly adjust from these values for subtle distinction (use e.g., `#6b6b6b` as a border for `#777777`, or `#444444` for contrast on `#555555`)
+- **Instruction:**  
+  All UI backgrounds, section backgrounds, cards, modals, form fields, and inputs must use ONLY these greys (and their tints/shades for depth)—**no black, no blue, no off-theme colors anywhere.**
+- **Important:**  
+  Both colors are fairly light—ensure that:
+    - **Text** is always readable (prefer dark greys `#232323` or black `#191919` on `#777777`; white `#fff` or near-white only where contrast is strong, e.g., on buttons).
+    - **Apply these shades everywhere:** global background, cards, nav, service sections, registration pages, input dropdowns, etc.
+
+---
+
+## 2. Buttons, Inputs, Cards, and Accent Colors
+
+- **Buttons:**  
+    - Default: `bg-[#555555]` with `text-white`
+    - On hover: `bg-[#fff]` with `text-[#555555]` and border `#777777`
+    - Border (where used): `#777777`
+- **Cards and Panels:**  
+    - Main bg: `#777777`
+    - Shadow: subtle dark grey (`#555555` with `box-shadow`), or use css like `box-shadow: 0 2px 10px #55555533;`
+- **Inputs/Dropdowns:**  
+    - Input/field background: `#555555`
+    - Text: `#fff` or dark text for strong contrast
+    - Placeholder: `#b0b0b0`
+    - Focus/active: Border or shadow using `#777777`
+    - Dropdowns: Ensure highlight, hover, selection states are visible—**use `#777777` as highlight, or invert for selected**
+- **Links/Icons:**  
+    - Minimal, e.g., faint blue (`#5b91e1`) or underlined dark, but all must fit in the grey visual language.
+
+---
+
+## 3. Complete Color Audit
+
+- **Carefully search and update** ALL hard-coded color usages and Tailwind classes across the application:
+    - No legacy black (`#000`, `#232323`, etc.) or prior palette values left on any element.
+    - All modals, popovers, dropdowns, sidebars, form controls, and utilities must adopt the grey theme.
+    - **Specifically:** Audit the appointment booking form, service pages, FAQ accordions, testimonial cards, dropdown menus, and mobile nav.
+        - On dropdown/select: field backgrounds, option highlight, and focus states must be updated (currently some text-only; make highlights visible with new grey shades).
+    - Use global variables or update Tailwind theme overrides for easy maintenance.
+
+---
+
+## 4. Theme Examples
+
+- **Tailwind config extension example:**
+    ```
+    // tailwind.config.js
+    theme: {
+      extend: {
+        colors: {
+          primarybg: '#777777',
+          card: '#555555',
+          border: '#6b6b6b',
+          input: '#555555',
+          button: {
+            DEFAULT: '#555555',
+            hover: '#fff',
+            text: '#fff',
+            hovertext: '#555555'
+          },
+          text: {
+            DEFAULT: '#232323',
+            light: '#fff'
+          }
+        }
+      }
+    }
+    ```
+- **Button class example:**
+    ```
+    bg-[#555555] text-white border-[#777777] hover:bg-[#fff] hover:text-[#555555] hover:border-[#555555]
+    ```
+- **Input class example:**
+    ```
+    bg-[#555555] text-white placeholder-[#b0b0b0] border-[#777777] focus:border-[#555555]
+    ```
+- **Dropdown/highlight:** For select/option:
+    ```
+    hover:bg-[#777777] focus:bg-[#777777] text-[#232323]
+    ```
+
+---
+
+## 5. Appointmnet Booking – System Email Test
+
+- After updating colors across all UI states, **perform a test booking and explicitly log the email result** (to both user and admin).  
+    - Use these Brevo credentials:
+      - `BREVO_USER=9284b3002@smtp-brevo.com`
+      - `BREVO_PASS=C9QhvHxbLpTn865P`
+    - Send from: `recruitment@dynish.com`
+    - Admin/Client email: `pottipatisaiprathap1234@gmail.com`
+- **In the backend:**
+    - Run `transporter.verify()` on server start and log if authentication fails.
+    - On booking, log both mail send result and any errors to the console.
+- **If the mail is not delivered, check `.env`, sender verification, and Brevo logs.**
+
+---
+
+## 6. Visual QA and Regression Test
+
+- After all palette changes, review every screen, input, select, modal, and interactive element for:
+    - Proper grey color application (no blacks, blues, old palette)
+    - Excellent readability and clearly visible selected/hovered states in all dropdowns, especially the appointment form
+    - Responsive design remains intact and clean on all breakpoints
+
+- If any color mismatch or unapplied field is found (e.g., invisible dropdown selected item, text unreadability), update colors immediately to fit the #777777/#555555 scheme.
+
+---
+
+**Only proceed when you are certain the entire application, including all interactive and non-interactive elements, is consistently themed with the provided light greys and all dynamic UI states are visually distinct, matched, and delightfully usable. Log, test, and confirm appointment notification functionality as well.**
+```
+
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/70504792/e694c929-1f23-422c-96d6-5cb69844b32d/Register-a-Startup-Changes.pdf
+[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/70504792/4003de25-b8bf-45cc-a2ad-ada45714f546/WhatsApp-Image-2025-07-26-at-15.11.16_cc756163.jpg?AWSAccessKeyId=ASIA2F3EMEYEYQE5SALM&Signature=jU1UryiGrT%2F68Teit%2Bi9s1fz5Ro%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEGQaCXVzLWVhc3QtMSJHMEUCIQD6Gx6J71FbKUi3o38%2FPSpWxlpQ1df361BmZ20uNJYAygIgRz5RBNK4a8y0%2FB1U9CkLiKUBGxm08cA2RsR2Q%2Fo3uX4q%2BgQIjf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDIn8skOm55gJxWOJUyrOBJI5QERuaYyrrhZ%2BPhAQe7NJEQQtfVcjzOEdxAfi2s%2FzlI8DCh0lEiZrTcTzDxTOeQaJ3T3GOwaOdPzal6TS%2F6kTx%2F8X1LgSeOE2PmT2jb10%2FtaF%2FtV831ebangNF8LDfSOvSaUpxcZcy9YfWRnALlyzwSu5mNOQMikhnari3MU69vBtJg8wvILCcDFBSCYX9uEi24lGUdUqk0v0g1DYN2wRVm99SAY4cCNeGmjV2BfwtV5qIAp%2F6Ycw4%2BhaA466Sb%2BegfBJJVkba42rwH5Ii37x5%2BmA1LMBuWh3DxOghkonu%2F1kPTA4UNI1AAMRySeQTCA22Sj7FU1cCHa2vD1AXchSYGXD5kc%2F2xKZ%2FS4oj%2BJsWA6%2BY7%2Fbv9Efaj%2BZpDn1NQ2fG9A2bFAZ1XZji3IR17yeNqsoOOrpoMKSyfYJqF05SUXUycHXrAgFOi2Cj7t6h3TACtyZEKP3P9PF1vFzOCyjrkhB5J23BqWGPROK%2FZw69C81iTNbz2HQQsfy2v4y1Bhguc4dZ5UW%2FVf4wu3aeWNqg8x64ZbyhH64Gwsr6WDWRNC%2BIZulJ6xMeUe3NrHZMHsEKwysiSIIaiAEv8W1F4Lf%2Bqb26IPoE4C9nJjbVK5OPHxOtwVEVkyJVU5MNE5qGp12gPYvxQAJm8VjUVF5utpe2arx2RIZiz4cINz%2F6TcngMzO9CUrN8j3BYsP32Cs6AK7AWht3Uck%2B52wqCbNTyfG9G4hsThyk4yLDsat9wtzxjtYRpN7M2L27VGqhVthzlFePJijTkTraECZCWfiMLm%2FncQGOpoBZk9NzLmvlDtfEbs8x0qusUSIwMyZlTx3x7YWI2%2FvCo2EoJNDgF4iEYejv4qrFU%2F0R%2FosZZm2uI1Fwz3sLvV49wjoKyFCuK%2FFXOS%2FwTX0X%2FDfcMVah5HgX1uKEivuWhCST50XEj%2FRXqGPg81riIalxeu4gYe8ulYd7cAsPUySg1Cceei32D2bY2uD%2FZ0pvjdQicLY9dwP64%2F5qw%3D%3D&Expires=1753704248
+[3] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/70504792/67946f9f-ce82-4ee5-ad7d-9c5b24975f11/WhatsApp-Image-2025-07-26-at-15.12.23_758e4b2a.jpg?AWSAccessKeyId=ASIA2F3EMEYEYQE5SALM&Signature=2d3ZTZT99UrtRcaCRHS%2BPaaihOI%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEGQaCXVzLWVhc3QtMSJHMEUCIQD6Gx6J71FbKUi3o38%2FPSpWxlpQ1df361BmZ20uNJYAygIgRz5RBNK4a8y0%2FB1U9CkLiKUBGxm08cA2RsR2Q%2Fo3uX4q%2BgQIjf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDIn8skOm55gJxWOJUyrOBJI5QERuaYyrrhZ%2BPhAQe7NJEQQtfVcjzOEdxAfi2s%2FzlI8DCh0lEiZrTcTzDxTOeQaJ3T3GOwaOdPzal6TS%2F6kTx%2F8X1LgSeOE2PmT2jb10%2FtaF%2FtV831ebangNF8LDfSOvSaUpxcZcy9YfWRnALlyzwSu5mNOQMikhnari3MU69vBtJg8wvILCcDFBSCYX9uEi24lGUdUqk0v0g1DYN2wRVm99SAY4cCNeGmjV2BfwtV5qIAp%2F6Ycw4%2BhaA466Sb%2BegfBJJVkba42rwH5Ii37x5%2BmA1LMBuWh3DxOghkonu%2F1kPTA4UNI1AAMRySeQTCA22Sj7FU1cCHa2vD1AXchSYGXD5kc%2F2xKZ%2FS4oj%2BJsWA6%2BY7%2Fbv9Efaj%2BZpDn1NQ2fG9A2bFAZ1XZji3IR17yeNqsoOOrpoMKSyfYJqF05SUXUycHXrAgFOi2Cj7t6h3TACtyZEKP3P9PF1vFzOCyjrkhB5J23BqWGPROK%2FZw69C81iTNbz2HQQsfy2v4y1Bhguc4dZ5UW%2FVf4wu3aeWNqg8x64ZbyhH64Gwsr6WDWRNC%2BIZulJ6xMeUe3NrHZMHsEKwysiSIIaiAEv8W1F4Lf%2Bqb26IPoE4C9nJjbVK5OPHxOtwVEVkyJVU5MNE5qGp12gPYvxQAJm8VjUVF5utpe2arx2RIZiz4cINz%2F6TcngMzO9CUrN8j3BYsP32Cs6AK7AWht3Uck%2B52wqCbNTyfG9G4hsThyk4yLDsat9wtzxjtYRpN7M2L27VGqhVthzlFePJijTkTraECZCWfiMLm%2FncQGOpoBZk9NzLmvlDtfEbs8x0qusUSIwMyZlTx3x7YWI2%2FvCo2EoJNDgF4iEYejv4qrFU%2F0R%2FosZZm2uI1Fwz3sLvV49wjoKyFCuK%2FFXOS%2FwTX0X%2FDfcMVah5HgX1uKEivuWhCST50XEj%2FRXqGPg81riIalxeu4gYe8ulYd7cAsPUySg1Cceei32D2bY2uD%2FZ0pvjdQicLY9dwP64%2F5qw%3D%3D&Expires=1753704248
+[4] https://www.color-hex.com/color/777777
+[5] https://www.color-hex.com/color/555555

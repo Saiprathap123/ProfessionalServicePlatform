@@ -1,0 +1,69 @@
+text
+# Replit Development Prompt: Services Alignment, Header More Grid, and Mobile Responsiveness
+
+---
+
+## 1. Strictly Use Provided Services and Registrations
+
+- **Update the landing page "Services" section** so that it displays only the exact services (and registration types under each) you provided—matching the canonical order and naming from your master list.
+    - Remove all placeholder or unrelated service cards.
+    - For each displayed service on the landing:
+        - **Header:** Service name as specified in your list.
+        - **Description:** SEO-friendly summary (optionally paraphrased, but accurate to client context).
+        - **Include links** to individual service page (not generic, but from your supplied list).
+    - **Navigation:** Clicking a card or link should navigate to the corresponding service as you defined.
+    - **Do not create or display pages for any service or registration not in your official list.**
+
+---
+
+## 2. Header "More" Dropdown as Responsive Grid
+
+- Refactor the "More" dropdown in the site header:
+    - Instead of a long vertical column, **organize all services and types of registrations into a 2×2 (or multi-column) responsive grid layout.**
+    - This enriches the UI, improves scan-ability, and looks more professional.
+    - Use CSS Grid or Flexbox for layout, with appropriate gaps and responsive breakpoints for smaller screens.
+- Each item in the grid should be:
+    - **Clickable**, with a clear label (service/registration name).
+    - Consistently styled with your dark theme and hover/focus states.
+
+---
+
+## 3. Perfect Mobile & Tablet Responsiveness
+
+- **Make the mobile/tablet header menu fully scrollable:**
+    - If there is a scroll overflow in the mobile menu (hamburger icon/3-lines), ensure you use CSS properties like `overflow-y-auto` or `scrollable` on the menu container, so users can scroll to see all services and registrations.
+    - Test the menu with several services open—users must be able to reach every link, no matter the number.
+- On mobile:
+    - Ensure tap/click targets are large enough.
+    - The grid in the "More" dropdown should stack gracefully (e.g., 1 column or 2 columns depending on width).
+- Test across standard screen widths for header/nav, dropdowns, and service navigation, maintaining usability and visual polish.
+
+---
+
+## 4. SEO Optimization Instructions
+
+- When updating the "Services" section and header, use:
+    - `<h2>` for each service name.
+    - Short, keyword-rich but natural descriptions.
+    - Semantic HTML for lists/links to registrations (e.g., `<ul>` and `<li>`).
+    - Ensure `alt` text on icons or thumbnail images.
+    - Keep navigation and section headers clear for search engines.
+
+---
+
+## 5. Implementation Notes
+
+- **Do not alter content of registration or service detail pages unless further SEO enhancements are required in subsequent tasks.**
+- All updates should preserve the visual theme, responsiveness, and accessibility.
+- After these core changes, test the site on desktop, tablet, and mobile views to ensure navigation, service discovery, and menu dropdowns are seamless and user-friendly.
+
+---
+
+**Proceed to:**
+1. Update the landing page services to your provided list/order only.
+2. Refactor the header "More" dropdown into a rich, responsive grid.
+3. Ensure full scroll-ability and usability of navigation on mobile/tablet, especially the full services list within the menu.
+
+After implementing, review in multiple viewports. Ready for further refinement upon request.
+
+https://github.com/Saiprathap123/ProfessionalServicePlatform.git

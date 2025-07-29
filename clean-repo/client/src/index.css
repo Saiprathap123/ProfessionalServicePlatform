@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Client Light Grey Theme Palette */
+  --primary-bg: #777777;
+  --secondary-bg: #555555;
+  --border-color: #6b6b6b;
+  --input-bg: #555555;
+  --button-bg: #555555;
+  --button-hover-bg: #ffffff;
+  --text-primary: #232323;
+  --text-light: #ffffff;
+  --text-placeholder: #b0b0b0;
+  --button-text: #ffffff;
+  --button-hover-text: #555555;
+  --highlight-bg: #777777;
+  --shadow-color: #555555;
+  --accent-blue: #5b91e1;
+}
+
+.dark {
+  --background: var(--dark-bg-main);
+  --foreground: var(--dark-text-primary);
+  --muted: var(--dark-surface);
+  --muted-foreground: var(--dark-text-muted);
+  --popover: var(--dark-surface);
+  --popover-foreground: var(--dark-text-primary);
+  --card: var(--dark-card);
+  --card-foreground: var(--dark-text-primary);
+  --border: var(--dark-border);
+  --input: var(--dark-input-bg);
+  --primary: var(--accent-blue);
+  --primary-foreground: var(--dark-text-primary);
+  --secondary: var(--dark-button-bg);
+  --secondary-foreground: var(--dark-text-primary);
+  --accent: var(--dark-bg-section);
+  --accent-foreground: var(--dark-text-primary);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: var(--dark-text-primary);
+  --ring: var(--dark-border);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--dark-bg-main);
+    color: var(--dark-text-primary);
+  }
+}
+
+/* Custom classes for new dark grey theme */
+.bg-dark-main {
+  background-color: var(--dark-bg-main);
+}
+
+.bg-dark-section {
+  background-color: var(--dark-bg-section);
+}
+
+.bg-dark-surface {
+  background-color: var(--dark-surface);
+}
+
+.bg-dark-card {
+  background-color: var(--dark-card);
+}
+
+.border-dark-border {
+  border-color: var(--dark-border);
+}
+
+.border-dark-divider {
+  border-color: var(--dark-divider);
+}
+
+.text-dark-primary {
+  color: var(--dark-text-primary);
+}
+
+.text-dark-body {
+  color: var(--dark-text-body);
+}
+
+.text-dark-muted {
+  color: var(--dark-text-muted);
+}
+
+/* Dark Grey Button Styles */
+.btn-dark-grey {
+  background-color: var(--dark-button-bg);
+  color: var(--dark-button-text);
+  border: 1px solid var(--dark-button-border);
+  transition: all 0.2s ease;
+}
+
+.btn-dark-grey:hover {
+  background-color: var(--dark-button-hover-bg);
+  color: var(--dark-button-hover-text);
+  border-color: var(--dark-button-border);
+}
+
+/* Dark Grey Input Styles */
+.input-dark-grey {
+  background-color: var(--dark-input-bg);
+  color: var(--dark-input-text);
+  border: 1px solid var(--dark-input-border);
+}
+
+.input-dark-grey::placeholder {
+  color: var(--dark-input-placeholder);
+}
+
+.input-dark-grey:focus {
+  border-color: var(--accent-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(112, 161, 255, 0.1);
+}

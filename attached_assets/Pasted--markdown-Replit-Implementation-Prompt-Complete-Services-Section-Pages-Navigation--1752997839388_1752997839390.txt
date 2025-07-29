@@ -1,0 +1,146 @@
+```markdown
+# Replit Implementation Prompt: Complete Services Section, Pages & Navigation
+
+---
+
+## 1. Expand Landing Page Services Section
+
+**Action:**  
+Update the *Services* section on the landing page so it displays — in the exact given order — these **9 top-level services**, each with a dropdown/expandable list of registrations beneath:
+
+### [Full List for Landing Page]
+1. **Business Registration**
+   - Private Limited Company Registration
+   - Public Limited Company Registration
+   - LLP Registration
+   - One Person Company Registration
+   - Nidhi Company Registration
+   - Producer Company Registration
+   - Partnership Firm Registration
+   - Startup India Registration
+
+2. **GST & Indirect Taxes**
+   - GST Registration
+   - GST Filing
+   - GST Portal Login Assistance
+   - HSN Code Finder
+   - GST Cancellation and Revocation
+   - Indirect Tax Consulting
+
+3. **Licenses & Registrations**
+   - Udyam Registration
+   - MSME Registration
+   - Trade Licenses
+   - FSSAI (Food License)
+   - IEC (Import/Export Code)
+   - Labour Licenses
+
+4. **NGO Services**
+   - Section 8 Company Registration
+   - Trust Registration
+   - NGO Registration
+
+5. **Accounting & Taxing**
+   - Accounting and Bookkeeping
+   - TDS Return Filing
+   - Individual Income Tax Filing
+   - Proprietorship Tax Return Filing
+   - ITR for LLP
+   - Corporate Tax Filing
+   - Income Tax Assessment
+   - Income Tax Notice Handling
+
+6. **Mandatory Annual Filings**
+   - Annual Compliance Services
+   - LLP Annual Filings
+
+7. **Changes in Private Limited Company**
+   - Add a Director
+   - Remove a Director
+   - Increase Authorized Capital
+   - Close the Pvt Ltd Company
+   - Strike Off Company
+   - Change Objective or Activity
+   - Change Address
+
+8. **Changes in Limited Liability Partnership**
+   - Add Designated Partner
+   - Amend LLP Agreement
+   - Close LLP
+
+9. **Employee Benefits**
+   - PF Registration
+   - ESI Registration
+   - TDS Returns (Form 24QB)
+   - Payroll Register
+   - Professional Tax Registration
+
+> **Replace** any instances of "Annual Compliance" service in the landing page with "Mandatory Annual Filings" (with the correct registrations listed above).
+> **Do not display any services or registrations not in this list.**
+
+---
+
+## 2. Create Missing Service & Registration Pages
+
+**Action:**  
+For all top-level services not already having a service page (inspired by your Business Registration example), create:
+- A **service landing page** with:
+  - Service title (as ``)
+  - SEO-optimized overview (1–2 paragraphs with relevant CA/finance keywords)
+  - Bullet points or sections for:
+    - Applicability / Ideal For
+    - Key Benefits
+    - List of registrations offered under this service (each a clickable link)
+  - Any FAQ or CTA as seen on the Business Registration service page
+
+- For each registration under every service:
+  - A dedicated registration page (if not already), preserving all client-supplied information and rewritten/structured for SEO, without changing context or omitting client-required facts.
+
+**Services to Confirm/Create Pages For:**
+- Licenses & Registrations
+- NGO Services
+- Accounting & Taxing
+- Mandatory Annual Filings
+- Changes in Private Limited Company
+- Changes in Limited Liability Partnership
+- Employee Benefits
+
+---
+
+## 3. Navigation & Testing
+
+**Action:**  
+- Ensure all new service and registration pages are properly linked:
+    - From the landing page services section
+    - From the top/side navigation and any "More" dropdowns in the header
+    - Clicking any registration in any service nav goes to the corresponding registration page
+- Test all navigation on desktop, tablet, and mobile (responsive)
+- No broken/empty routes; all services and pages navigable as per site logic
+
+---
+
+## 4. Layout & Content Consistency
+
+- **Do not invent new layouts**—exactly mirror how "Business Registration" service and its registrations are designed, including headings, CTAs, subtitles, sectioning, and content style for every other service and registration page.
+- All new service and registration pages should follow this exact template, with clean SEO markup and structure, high readability, and copy optimized for Google discovery.
+
+---
+
+## 5. Summary Table
+
+| Section/Action                | What to Do                                                                 |
+|-------------------------------|----------------------------------------------------------------------------|
+| Landing Page Services         | Render all 9 services in exact client-provided order/list, no extras        |
+| Registration Pages            | One page per registration, all details/SEO but correct client context       |
+| Service Pages                 | Business Registration-style SEO pages for all services, new and missing     |
+| Navigation                    | Link all service/registration pages everywhere necessary, test all routes   |
+| Layout/SEO                    | Mirror Business Registration for style/SEO. No new design/layout needed     |
+
+---
+
+**Proceed immediately to:**
+- Update landing/services list to strictly match above
+- Create and SEO-optimize missing service/registration pages in that structure
+- Connect all pages through landing, services, and header navigation for a seamless UX
+- Test navigation and content rendering after changes
+```
